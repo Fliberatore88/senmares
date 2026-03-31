@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Mail, Phone, MessageCircle, MapPin, FileText, ExternalLink } from "lucide-react";
+import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -66,39 +66,6 @@ export default function Contact() {
             {t("description")}
           </p>
         </motion.div>
-
-        {/* Certification Form Banner */}
-        <motion.a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdZnEdrtHNiB1Ti80rITP_hhRKDs44NW22PpzAiWXvKWdVTww/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="group relative rounded-2xl p-px overflow-hidden mb-12 block cursor-pointer"
-        >
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-accent/20 via-cyan-accent/5 to-sky-500/20 group-hover:from-cyan-accent/30 group-hover:to-sky-500/30 transition-all duration-500" />
-          <div className="relative bg-navy-900/70 backdrop-blur-sm rounded-2xl px-8 py-6 border border-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="text-cyan-accent p-3 rounded-xl bg-cyan-accent/[0.08] group-hover:bg-cyan-accent/[0.15] transition-all duration-300">
-                <FileText className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-white font-bold text-lg group-hover:text-cyan-accent transition-colors duration-300">
-                  {t("certForm")}
-                </h3>
-                <p className="text-slate-400 text-sm">{t("certFormDesc")}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 px-6 py-3 bg-cyan-accent/10 border border-cyan-accent/30 group-hover:bg-cyan-accent/20 group-hover:border-cyan-accent/50 rounded-full transition-all duration-300 shrink-0">
-              <span className="text-cyan-accent font-semibold text-sm tracking-wider uppercase">
-                {t("openForm")}
-              </span>
-              <ExternalLink className="w-4 h-4 text-cyan-accent" />
-            </div>
-          </div>
-        </motion.a>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <motion.div
