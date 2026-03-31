@@ -8,71 +8,100 @@ Electronic repair and automation control services for the maritime industry.
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript (strict mode)
 - **Styling:** Tailwind CSS v4 (via `@tailwindcss/postcss`)
-- **Animations:** Framer Motion
+- **Animations:** Framer Motion (dynamic imported for below-fold sections)
 - **Icons:** Lucide React
 - **React:** v19 with React Compiler enabled
+- **i18n:** next-intl (EN/ES)
+- **Hosting:** Vercel (auto-deploy from GitHub on push to main)
+- **Domain:** https://senmares.com
 
 ## Project Structure
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx        # Root layout (Navbar + Footer wrap all pages)
-│   ├── page.tsx           # Home page (Hero, Services, About, Contact sections)
-│   ├── globals.css        # Global styles (Tailwind imports + smooth scroll)
-│   └── favicon.ico
+│   ├── layout.tsx              # Root layout (thin wrapper, returns children)
+│   ├── globals.css             # Global styles, CSS variables, utilities
+│   ├── icon.png                # Favicon (192px, auto-served by Next.js)
+│   ├── apple-icon.png          # Apple touch icon (180px)
+│   ├── sitemap.ts              # Dynamic sitemap with locale alternates
+│   └── [locale]/
+│       ├── layout.tsx          # Locale layout (Inter font, metadata, JSON-LD, NextIntlClientProvider)
+│       └── page.tsx            # Home page (Hero + lazy-loaded Services, About, Contact)
 ├── components/
-│   ├── sections/          # Page sections (Hero, Services, About, Contact)
-│   └── ui/                # Shared UI (Navbar, Footer)
-└── data/
-    └── services.ts        # Services data (4 vessel zones with items)
+│   ├── sections/               # Hero, Services, About, Contact
+│   └── ui/                     # Navbar, Footer, AnimatedCounter, WaveBackground, LanguageSwitcher
+├── i18n/
+│   ├── routing.ts              # Locale config (en/es, default en, no auto-detection)
+│   └── request.ts              # Server-side i18n config
+└── middleware.ts                # next-intl middleware for locale routing
+
+messages/
+├── en.json                     # English translations
+└── es.json                     # Spanish translations
 
 public/
-├── senmares_logo_palette/ # Full brand asset library (PNGs, see README.md inside)
-└── senmares_logo_palette.zip
+├── robots.txt
+└── senmares_logo_palette/
+    ├── favicon-64.png          # Optimized favicon (3.6KB) — Navbar & Footer
+    ├── senmares_favicon_navy_bg.png  # Source favicon (251KB) — used for icon.png generation
+    ├── senmares_hero_gradient_bg.png # Hero image (105KB, optimized from 326KB)
+    └── senmares_banner_navy_bg.png   # OG/Twitter social image
 ```
 
-## Brand Colors
+## Brand Colors (CSS variables in globals.css)
 
-- **Navy Dark:** `#020b18` (main background)
-- **Navy Mid:** `#0d1f35` (section alternation / cards)
-- **Navy Light:** `#0a1628` (gradients)
-- **Sky/Cyan:** `sky-400`/`sky-500` (accent, CTAs, highlights)
-- **Brand Palette:** Navy `#1a3a52`, Cyan `#00d4d4`, White `#FFFFFF`
+- `--color-navy-950: #020b18` — main background
+- `--color-navy-900: #0a1628` — gradients
+- `--color-navy-800: #0d1f35` — section alternation, cards
+- `--color-navy-700: #132d4a` — mid tones
+- `--color-cyan-accent: #00d4d4` — primary accent, CTAs, glows
 
 ## Design Patterns
 
-- Single-page layout with anchor navigation (`#services`, `#about`, `#contact`)
-- Dark navy theme throughout — no light mode
-- Framer Motion for scroll-triggered animations (`whileInView`) and entrance animations
-- Responsive: mobile-first with `md:` and `lg:` breakpoints
-- Cards use `bg-[#0a1628]` with `border-slate-700/50` and hover effects
-- CTAs are rounded-full buttons (`bg-sky-500` primary, border outline secondary)
-- Forms submit via FormSubmit.co to `administracion@senmares.com`
+- Single-page with anchor navigation (`#services`, `#about`, `#contact`)
+- Cinematic dark theme — no light mode
+- Animated wave canvas background in Hero (WaveBackground, client-only)
+- Glass-effect cards with gradient borders on hover
+- Animated stat counters (AnimatedCounter with useInView)
+- Framer Motion: `whileInView` for scroll animations, custom easing `[0.16, 1, 0.3, 1]`
+- `prefers-reduced-motion` respected globally
+- Forms submit via FormSubmit.co to administracion@senmares.com
 
 ## Commands
 
 ```bash
-npm run dev    # Start dev server
-npm run build  # Production build
-npm run lint   # ESLint
+npm run dev          # Dev server (requires Node >= 20)
+npm run build        # Production build
+npm run lint         # ESLint
+npx vercel --prod    # Manual deploy to Vercel
 ```
 
-## Logo Assets
+## Node Version
 
-Brand assets are in `public/senmares_logo_palette/`. See the README.md inside for usage guide.
-Key mappings:
-- **Navbar/Header:** `senmares_horizontal_transparent.png`
-- **Favicon:** `senmares_favicon_transparent.png` or `senmares_favicon_navy_bg.png`
-- **Hero section:** `senmares_hero_transparent.png` or `senmares_hero_gradient_bg.png`
-- **Footer:** `senmares_horizontal_transparent.png` (smaller)
-- **OG/Social:** `senmares_banner_navy_bg.png`
+Requires Node >= 20. Use `nvm use 20` if default is 18.
+
+## SEO
+
+- robots.txt + dynamic sitemap.ts with locale alternates
+- JSON-LD structured data (LocalBusiness schema)
+- Canonical URLs and hreflang per locale
+- OG/Twitter meta tags with localized content
+- metadataBase: https://senmares.com
+
+## Lighthouse Scores (Production)
+
+- **Accessibility:** 100
+- **Best Practices:** 100
+- **SEO:** 92 (goes to ~100 with domain canonical resolving)
+- **Performance:** 78
 
 ## Language
 
 - Everything in English (code, comments, UI, commits, docs)
-- Internationalization (i18n) will be added for translations
-- The site targets an international maritime audience
+- i18n implemented with next-intl (EN default, ES available)
+- Default locale: EN (no browser auto-detection)
+- Language switcher in Navbar (desktop and mobile)
 
 ## Goals & Priorities
 
