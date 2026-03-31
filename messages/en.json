@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "title": "SENMARES - Naval Electronics",
+    "description": "Electronic repair and automation control services for the maritime industry. Specialized technical solutions for every zone of your vessel."
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch"
+  },
+  "hero": {
+    "heading1": "Precision electronics",
+    "heading2": "for every vessel",
+    "tagline": "Naval Electronics",
+    "description": "Electronic repair and automation control services for the maritime industry. Specialized technical solutions from bridge to engine room.",
+    "ctaContact": "Contact Us",
+    "ctaServices": "Our Services"
+  },
+  "services": {
+    "label": "What We Do",
+    "title": "Our Services",
+    "description": "Specialized electronic repair and automation solutions covering every critical zone of your vessel.",
+    "zones": {
+      "bridge": {
+        "name": "Navigation Bridge",
+        "tag": "Bridge",
+        "items": [
+          "Fire detection central",
+          "Watermist repeaters",
+          "Command control systems",
+          "Machine alarm repeater"
+        ]
+      },
+      "ecr": {
+        "name": "Engine Control Room",
+        "tag": "ECR",
+        "items": [
+          "Alarm monitoring systems (AMS)",
+          "Oily water separator (OWS)",
+          "Watermist / Hypermist",
+          "Inert gas - automation control",
+          "Bilge alarms",
+          "Temperature control - PID",
+          "Viscometer"
+        ]
+      },
+      "mainDeck": {
+        "name": "Main Deck",
+        "tag": "Main Deck",
+        "items": [
+          "Pressure sensors (Ex)",
+          "Temperature sensors (PT100, PT1000)",
+          "Overfill sensors",
+          "Radartank - verification and control",
+          "Level sensors (hydrostatic pressure & bubbling)"
+        ]
+      },
+      "ccr": {
+        "name": "Cargo Control Room",
+        "tag": "CCR",
+        "items": [
+          "Oleometer",
+          "Telelevels, pressure & temperature monitoring",
+          "Valve open/close indicators",
+          "Portable & fixed gas monitoring",
+          "Draft and ballast level monitoring"
+        ]
+      }
+    }
+  },
+  "about": {
+    "label": "Who We Are",
+    "title1": "Naval electronics",
+    "title2": "experts you can trust",
+    "p1": "SENMARES is a specialized naval electronics service company based in Buenos Aires, Argentina. We provide electronic repair, automation control, and technical consulting for vessels operating in Argentine and international waters.",
+    "p2": "Our team of certified technicians offers comprehensive coverage across every critical system of your vessel — from the navigation bridge to the engine room — ensuring operational continuity and regulatory compliance.",
+    "ctaContact": "Get in Touch",
+    "ctaServices": "View Services",
+    "stats": {
+      "experience": "Years of experience",
+      "vessels": "Vessels serviced",
+      "support": "Technical support",
+      "certified": "Certified technicians"
+    }
+  },
+  "contact": {
+    "label": "Get In Touch",
+    "title": "Contact Us",
+    "description": "Need technical support or a quote? Our team is available to assist you at any port.",
+    "info": {
+      "admin": "Administration & Quotes",
+      "technical": "Technical Inquiries",
+      "whatsapp": "WhatsApp",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "John Smith",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company / Vessel",
+      "companyPlaceholder": "Vessel name or company",
+      "message": "Message",
+      "messagePlaceholder": "Describe your inquiry...",
+      "submit": "Send Message"
+    },
+    "certForm": "Certification Request Form",
+    "certFormDesc": "Need a certification? Fill out our online form directly.",
+    "openForm": "Open Form",
+    "success": {
+      "title": "Message sent!",
+      "description": "We'll get back to you as soon as possible."
+    }
+  },
+  "footer": {
+    "subtitle": "Naval Electronics",
+    "rights": "All rights reserved."
+  }
+}

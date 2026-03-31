@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "title": "SENMARES - Electrónica Naval",
+    "description": "Servicios de reparación electrónica y control de automatización para la industria marítima. Soluciones técnicas especializadas para cada zona de su embarcación."
+  },
+  "nav": {
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "getInTouch": "Contactanos"
+  },
+  "hero": {
+    "heading1": "Electrónica de precisión",
+    "heading2": "para cada embarcación",
+    "tagline": "Electrónica Naval",
+    "description": "Servicios de reparación electrónica y control de automatización para la industria marítima. Soluciones técnicas especializadas del puente a la sala de máquinas.",
+    "ctaContact": "Contactanos",
+    "ctaServices": "Nuestros Servicios"
+  },
+  "services": {
+    "label": "Qué Hacemos",
+    "title": "Nuestros Servicios",
+    "description": "Soluciones especializadas en reparación electrónica y automatización para cada zona crítica de su embarcación.",
+    "zones": {
+      "bridge": {
+        "name": "Puente de Navegación",
+        "tag": "Puente",
+        "items": [
+          "Central de detección de incendios",
+          "Repetidoras de Watermist",
+          "Sistemas de control de comando",
+          "Repetidor de alarma de máquinas"
+        ]
+      },
+      "ecr": {
+        "name": "Sala de Control de Máquinas",
+        "tag": "SCM",
+        "items": [
+          "Sistemas de monitoreo de alarmas (AMS)",
+          "Separador de aguas oleosas (OWS)",
+          "Watermist / Hypermist",
+          "Gas inerte - control de automatización",
+          "Alarmas de sentina",
+          "Control de temperatura - PID",
+          "Viscosímetro"
+        ]
+      },
+      "mainDeck": {
+        "name": "Cubierta Principal",
+        "tag": "Cubierta",
+        "items": [
+          "Sensores de presión (Ex)",
+          "Sensores de temperatura (PT100, PT1000)",
+          "Sensores de sobrellenado",
+          "Radartank - verificación y control",
+          "Sensores de nivel (presión hidrostática y burbujeo)"
+        ]
+      },
+      "ccr": {
+        "name": "Sala de Control de Carga",
+        "tag": "SCC",
+        "items": [
+          "Oleómetro",
+          "Teleniveles, monitoreo de presión y temperatura",
+          "Indicadores de apertura/cierre de válvulas",
+          "Monitoreo de gas portátil y fijo",
+          "Monitoreo de calado y nivel de lastre"
+        ]
+      }
+    }
+  },
+  "about": {
+    "label": "Quiénes Somos",
+    "title1": "Expertos en electrónica naval",
+    "title2": "en quienes podés confiar",
+    "p1": "SENMARES es una empresa especializada en servicios de electrónica naval con sede en Buenos Aires, Argentina. Brindamos reparación electrónica, control de automatización y consultoría técnica para embarcaciones que operan en aguas argentinas e internacionales.",
+    "p2": "Nuestro equipo de técnicos certificados ofrece cobertura integral en cada sistema crítico de su embarcación — desde el puente de navegación hasta la sala de máquinas — asegurando continuidad operativa y cumplimiento normativo.",
+    "ctaContact": "Contactanos",
+    "ctaServices": "Ver Servicios",
+    "stats": {
+      "experience": "Años de experiencia",
+      "vessels": "Embarcaciones atendidas",
+      "support": "Soporte técnico",
+      "certified": "Técnicos certificados"
+    }
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Contactanos",
+    "description": "¿Necesitás soporte técnico o un presupuesto? Nuestro equipo está disponible para asistirte en cualquier puerto.",
+    "info": {
+      "admin": "Administración y Presupuestos",
+      "technical": "Consultas Técnicas",
+      "whatsapp": "WhatsApp",
+      "phone": "Teléfono",
+      "address": "Dirección"
+    },
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Email",
+      "emailPlaceholder": "juan@empresa.com",
+      "company": "Empresa / Embarcación",
+      "companyPlaceholder": "Nombre de embarcación o empresa",
+      "message": "Mensaje",
+      "messagePlaceholder": "Describí tu consulta...",
+      "submit": "Enviar Mensaje"
+    },
+    "certForm": "Formulario de Solicitud de Certificaciones",
+    "certFormDesc": "¿Necesitás una certificación? Completá nuestro formulario online.",
+    "openForm": "Abrir Formulario",
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "description": "Nos pondremos en contacto a la brevedad."
+    }
+  },
+  "footer": {
+    "subtitle": "Electrónica Naval",
+    "rights": "Todos los derechos reservados."
+  }
+}
